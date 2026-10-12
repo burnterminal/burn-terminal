@@ -50,8 +50,7 @@ $ burn --help
   <img src="assets/choice.png" width="49%" alt="Step 4: burn for a bigger drop, or claim the free allocation">
 </p>
 <p align="center">
-  <img src="assets/check.png" width="49%" alt="After the check: every counted token and NFT collection">
-  <img src="assets/final.png" width="49%" alt="The final allocation and the shareable card">
+  <img src="assets/final.png" width="72%" alt="The final allocation and the shareable card">
 </p>
 <p align="center"><sub>Screenshots use demo data.</sub></p>
 
