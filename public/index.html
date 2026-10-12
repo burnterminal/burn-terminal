@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BURN Terminal</title>
+<meta name="description" content="Burn your rugged Solana tokens &amp; NFTs. Get $BURN.">
+<meta name="theme-color" content="#000000">
+<meta property="og:title" content="BURN Terminal">
+<meta property="og:description" content="Burn your rugged tokens &amp; NFTs. Get $BURN.">
+<link rel="preload" href="/fonts/dvm.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/dvm-bold.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="icon" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:image" content="https://burnterminal.com/og.png">
+<meta property="og:url" content="https://burnterminal.com/">
+<meta name="twitter:site" content="@burnterminal">
+<meta name="twitter:image" content="https://burnterminal.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="/style.css?v=20261012a">
+</head>
+<body>
+<main class="t" id="top">
+  <header class="top">
+    <span class="w"><b>BURN</b></span><span class="dim">terminal</span>
+    <span class="sp"></span>
+    <button class="lk" id="soundBtn" aria-pressed="false">sound off</button>
+    <a href="https://x.com/burnterminal" target="_blank" rel="noopener">x</a>
+    <a class="tgLink" target="_blank" rel="noopener">telegram</a>
+  </header>
+
+  <section class="hero">
+    <div class="flamecol"><pre id="flame" role="img" aria-label="BURN mascot: an ASCII flame with bored eyes"></pre></div>
+    <div class="herotext">
+      <pre class="fig" id="heroFig" aria-label="BURN"></pre>
+      <p class="big">Burn your rugged tokens &amp; NFTs.<br>Get <span class="y">$BURN</span>.</p>
+      <p class="dim">150,000,000 $BURN go to burners. 50,000,000 to early supporters. Solana.</p>
+      <p class="dim">No rugs? Do four quick tasks and get in early.</p>
+      <p class="dim" id="live" hidden></p>
+      <p class="gap"><a class="b p" href="#burn">Get in</a></p>
+    </div>
+  </section>
+
+  <section id="burn">
+    <p class="cmd"><span class="ps">$</span> burn</p>
+    <div id="log" aria-live="polite"></div>
+  </section>
+
+  <section id="calc">
+    <div class="cmdrow"><p class="cmd"><span class="ps">$</span> burn calculator</p><p class="views">view <button class="lk" data-view="simple">simple</button> <span class="dim">/</span> <button class="lk" data-view="chart">chart</button></p></div>
+    <div class="in">
+      <div class="crow"><span>Tokens &amp; NFTs you burn</span><span class="step"><button class="b q" data-c="n" data-d="-1" aria-label="fewer">-</button><b id="cN" class="num">3</b><button class="b q" data-c="n" data-d="1" aria-label="more">+</button></span></div>
+      <div class="crow"><span>People burning in total</span><span class="step"><button class="b q" data-c="p" data-d="-500" aria-label="fewer people">-</button><b id="cP" class="num">4,000</b><button class="b q" data-c="p" data-d="500" aria-label="more people">+</button></span></div>
+      <div id="calcChart" class="chartv" hidden>
+        <p id="cPick"></p>
+        <div class="plot"><span class="ymax dim"><span id="cMax"></span></span><div class="cols" id="cCols" aria-label="Pick how many you burn"></div></div>
+        <div class="xax dim"><span>1</span><span>10</span><span>20</span><span>30</span></div>
+        <p class="dim">Tap a column to pick how many you burn.</p>
+      </div>
+      <div class="crow tot"><span>Your drop</span><b class="y num" id="cOut">0 $BURN</b></div>
+      <p class="dim gap">How it works: 150,000,000 $BURN go to burners. 30% is split equally between everyone. 70% is split by how many different tokens and NFT collections each person burned. More burned, bigger share, up to 30.</p>
+      <p class="dim">Nothing to burn? Early supporters do the tasks and split 50,000,000 $BURN equally. With 5,000 of them that's about 10,000 $BURN each.</p>
+    </div>
+  </section>
+
+  <section id="rules">
+    <p class="cmd"><span class="ps">$</span> burn rules</p>
+    <ol class="in rules">
+      <li>Each token or NFT collection counts once. Sending more of it adds nothing.</li>
+      <li>Up to 30 count per wallet.</li>
+      <li>Only Solana tokens and NFTs count. SOL, stablecoins and compressed NFTs don't.</li>
+      <li>Stock tokens are real money. Keep them, burn rugs.</li>
+      <li>No rugs? Do the tasks and you're in as an early supporter.</li>
+      <li>One X account, one wallet.</li>
+      <li>Sent tokens and NFTs are never returned.</li>
+    </ol>
+  </section>
+
+  <footer>
+    <p class="cmd"><span class="ps">$</span> burn links</p>
+    <dl class="in links">
+      <dt>X</dt><dd><a href="https://x.com/burnterminal" target="_blank" rel="noopener">x.com/burnterminal</a></dd>
+      <dt>Telegram</dt><dd><a class="tgLink" target="_blank" rel="noopener">join</a></dd>
+      <dt>Burn address</dt><dd><span class="y addr" id="footAddr"></span> <button class="lk" data-copy="dead">copy</button></dd>
+    </dl>
+    <p class="cmd gap"><span class="ps">$</span> <span class="cur"></span></p>
+  </footer>
+</main>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="/app.js?v=20261012a"></script>
+</body>
+</html>
